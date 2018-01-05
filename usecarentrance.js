@@ -663,6 +663,252 @@ window.onload = function() {
         }
     };
 
+    // by tsl19984 获取接口数据
+    var Ajax = {
+        // 获取服务器时间
+        getDateTime: function() {
+            var params = {
+            };
+            
+            var dataStr = JSON.stringify({
+                requrl: "http://wx.qa.17u.cn/CarWeiXin/carorder",
+                servicename: 'getusetime',
+                reqbody: params,
+                "iscache": "0"
+            });
+
+            $.ajax({
+                url: "http://wx.qa.17u.cn/CarWeiXin/carorder/getusetime",
+                type: "POST",
+                data: dataStr,
+                success: function(data) {
+                    var cbData = JSON.parse(data),
+                        response = cbData.response,
+                        body = response.body,
+                        header = response.header;
+
+                    // 假数据 start
+                    header.rspCode = "0000";
+                    body = {
+                        "clientinfo":null,
+                        "error":null,
+                        "useTimeModel":{
+                            "startTime":"2018-01-05 17:21",
+                            "endTime":"2018-04-05 17:21",
+                            "currentYear":"2018",
+                            "currentTime":"2018-01-05 17:21:51"
+                        }
+                    }
+                    // 假数据 end
+                    
+                    if (header.rspCode == "0000") {//请求成功
+                        //具体的逻辑
+                        console.log(body);
+                    }
+                },
+                error: function(e) {
+                    console.log(e);
+                }
+            })
+        },
+        // 地址联想
+        getBlurAddress: function() {
+            var params = {
+                'cityId': 321,
+                'keyWord': '新'
+            };
+
+            var dataStr = JSON.stringify({
+                requrl: "http://wx.qa.17u.cn/CarWeiXin/carorder",
+                servicename: 'getlocation',
+                reqbody: params,
+                "iscache": "0"
+            });
+
+            $.ajax({
+                url: "http://wx.qa.17u.cn/CarWeiXin/carorder/getlocation",
+                type: "POST",
+                data: dataStr,
+                success: function(data) {
+                    var cbData = JSON.parse(data),
+                        response = cbData.response,
+                        body = response.body,
+                        header = response.header;
+
+                    // 假数据 start
+                    header.rspCode = "0000";
+                    body = {
+                        "placeList":[
+                            {
+                                "id":"BV10039784",
+                                "name":"新天地(地铁站)",
+                                "district":"上海市黄浦区",
+                                "adcode":"310101",
+                                "location":"121.475182,31.216367",
+                                "address":"10号线;13号线",
+                                "longitude":"121.475182",
+                                "latitude":"31.216367"
+                            },
+                            {
+                                "id":"B001539A1D",
+                                "name":"新世界城",
+                                "district":"上海市黄浦区",
+                                "adcode":"310101",
+                                "location":"121.473656,31.235118",
+                                "address":"南京西路2-68号",
+                                "longitude":"121.473656",
+                                "latitude":"31.235118"
+                            },
+                            {
+                                "id":"BV10039891",
+                                "name":"新闸路(地铁站)",
+                                "district":"上海市黄浦区",
+                                "adcode":"310101",
+                                "location":"121.468151,31.238373",
+                                "address":"1号线",
+                                "longitude":"121.468151",
+                                "latitude":"31.238373"
+                            },
+                            {
+                                "id":"B00155KUM0",
+                                "name":"上海新天地(马当路)",
+                                "district":"上海市黄浦区",
+                                "adcode":"310101",
+                                "location":"121.47495,31.219921",
+                                "address":"太仓路181弄",
+                                "longitude":"121.47495",
+                                "latitude":"31.219921"
+                            },
+                            {
+                                "id":"B00155L0YG",
+                                "name":"新天地时尚·购物中心",
+                                "district":"上海市黄浦区",
+                                "adcode":"310101",
+                                "location":"121.475125,31.21755",
+                                "address":"马当路245号",
+                                "longitude":"121.475125",
+                                "latitude":"31.21755"
+                            },
+                            {
+                                "id":"B00155KEIX",
+                                "name":"上海交通大学医学院附属新华医院",
+                                "district":"上海市杨浦区",
+                                "adcode":"310110",
+                                "location":"121.517798,31.273252",
+                                "address":"控江路1665号",
+                                "longitude":"121.517798",
+                                "latitude":"31.273252"
+                            },
+                            {
+                                "id":"BV10039866",
+                                "name":"新村路(地铁站)",
+                                "district":"上海市普陀区",
+                                "adcode":"310107",
+                                "location":"121.422682,31.263952",
+                                "address":"7号线",
+                                "longitude":"121.422682",
+                                "latitude":"31.263952"
+                            },
+                            {
+                                "id":"BV10027172",
+                                "name":"新场(地铁站)",
+                                "district":"上海市浦东新区",
+                                "adcode":"310115",
+                                "location":"121.648980,31.045561",
+                                "address":"16号线",
+                                "longitude":"121.648980",
+                                "latitude":"31.045561"
+                            }
+                        ],
+                        "msg":null,
+                        "success":true,
+                        "strideCity":false,
+                        "cityId":null,
+                        "cityName":null
+                    }
+                    // 假数据 end
+                    
+                    if (header.rspCode == "0000") {//请求成功
+                        //具体的逻辑
+                        console.log(body);
+                    }
+                },
+                error: function(e) {
+                    console.log(e);
+                }
+            })
+        },
+        // 获取预估价
+        getCarPrice: function() {
+            var params = {
+                'memberId': 'oOCyauGJyquRcVDoeU8N4gGQz4m0',
+                'platform': 'WeChat',
+                'distributorCd': 'DeliveryTrainTicket',
+                'productId': 14,
+                'startCityId': 321,
+                'endCityId': 321,
+                'startAddress': '上海站',
+                'startAddressDetail': '上海站',
+                'startLongitude': '121.45575',
+                'startLatitude': '31.249571',
+                'endAddress': '上海绿地万豪酒店',
+                'endAddressDetail': '',
+                'endLongitude': '121.47283',
+                'endLatitude': '31.192172',
+                'carUseTimeStr': '2018-01-07 12:30',
+                'landmarkNo': '',
+                'flightNo': '',
+                'flightDateStr': ''
+            };
+
+            // 新接口这块必写 params不能是空对象 老接口可以不要reqbody
+            var paramsArray = [], reqbody;
+            for (var o in params) {
+                paramsArray.push('"' + o + '":' + '"' + params[o] + '"');
+            }
+            reqbody = encodeURIComponent(paramsArray.join(","));
+
+            var dataStr = JSON.stringify({
+                requrl: "http://wx.qa.17u.cn/CarDistributionMobileWebApi/distribution",
+                servicename: 'estimateprice',
+                reqbody: reqbody,
+                "iscache": "0"
+            });
+
+            $.ajax({
+                url: "http://wx.qa.17u.cn/CarDistributionMobileWebApi/distribution/estimateprice",
+                type: "POST",
+                data: dataStr,
+                success: function(data) {
+                    var cbData = JSON.parse(data),
+                        response = cbData.response,
+                        body = response.body,
+                        header = response.header;
+
+                    // 假数据 start
+                    header.rspCode = "0000";
+                    body = {
+                        "price":27,
+                        "priceEstimateMark":"32391cee-1107-40b5-aaba-bfd42020651d"
+                    }
+                    // 假数据 end
+                    
+                    if (header.rspCode == "0000") {//请求成功
+                        //具体的逻辑
+                        console.log(body);
+                    }
+                },
+                error: function(e) {
+                    console.log(e);
+                }
+            })
+        }
+    }
+
+    Ajax.getDateTime();
+    Ajax.getBlurAddress();
+    Ajax.getCarPrice();
+
     // 页面初始化
     page.init();
 };
