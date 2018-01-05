@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./usecarentrance.css"> -->
+    <style>
+        body,
+        button,
+        input,
+        select,
+        textarea {
+            font: 14px/1.5 Arial,\5b8b\4f53;
+        }
+
+        html,body {
+            height: 100%;
+            background-color: #efeff4;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="huoche"></div> -->
+    <div class="huoche">
+        <div id="usecar">
+            <div class="uc-main">
+                <h2 class="uc-title uc-c-333 uc-fs-16px uc-lh-16px">专车接送</h2>
+                <ul class="uc-tab uc-bt-05px uc-d-flex uc-c-666">
+                    <li class="uc-tab-item uc-tab-jie uc-fs-16px uc-f-1 uc-o-hidden">到<span class="uc-station uc-station-jie"></span>接我</li>
+                    <li class="uc-tab-item uc-tab-song uc-fs-16px uc-f-1 uc-o-hidden">送我到<span class="uc-station uc-station-song"></span></li>
+                </ul>
+                <ul class="uc-product">
+                    <li class="uc-product-item uc-product-jie">
+                        <div class="uc-box1">
+                            <div class="uc-time-box uc-time-box-jie uc-bb-05px">
+                                <div class="uc-time uc-time-jie uc-fs-16px uc-lh-16px uc-c-333"></div>
+                                <div class="uc-time-notice uc-fs-12px uc-lh-12px uc-c-666"><span class="uc-train-no-jie"></span>预计<span class="uc-arrive-time"></span>到达</div>
+                            </div>
+                            <div class="uc-address-box uc-arrive-box">
+                                <div class="uc-fs-16px uc-lh-16px uc-c-ccc">您要去哪儿</div>
+                                <div class="uc-fs-16px uc-lh-16px uc-c-333 uc-to-ellipsis uc-none"></div>
+                            </div>
+                        </div>
+                        <div class="uc-select-address-box uc-select-address-box-jie uc-bt-05px uc-none">
+                            <div class="uc-address-input-box uc-bb-05px">
+                                <input type="text" placeholder="请输入到达地址" class="uc-address-input uc-address-input-jie uc-bs-bb">
+                                <img src="https://img1.40017.cn/cn/TC_Car/h5/img/common/delete.png?v=2018010401" alt="del_icon" class="uc-address-del uc-address-del-jie uc-none">
+                            </div>
+                            <div class="uc-address-no-result uc-address-no-result-jie uc-none">筛选无结果</div>
+                            <ul class="uc-address-list">
+                                <li class="uc-address-item">
+                                    <div class="uc-place uc-fs-16px uc-c-333">同程大厦</div>
+                                    <div class="uc-address-detail uc-fs-12px uc-c-666">同程大厦同程大厦</div>
+                                </li>
+                                <li class="uc-address-item uc-bt-05px">
+                                    <div class="uc-place uc-fs-16px uc-c-333">同程大厦</div>
+                                    <div class="uc-address-detail uc-fs-12px uc-c-666">同程大厦同程大厦</div>
+                                </li>
+                                <li class="uc-address-item uc-bt-05px">
+                                    <div class="uc-place uc-fs-16px uc-c-333">同程大厦</div>
+                                    <div class="uc-address-detail uc-fs-12px uc-c-666">同程大厦同程大厦</div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="uc-bt-05px uc-amount-box">
+                            <div class="uc-amount-default-box uc-none">
+                                <div class="uc-amount-default">
+                                    <span class="uc-fs-14px uc-lh-14px uc-c-333">一口价</span>
+                                    <span class="uc-fs-14px uc-lh-12px uc-c-ff6633 uc-ml-6px">&yen;</span>
+                                    <span class="uc-fs-22px uc-lh-16px uc-c-ff6633">10</span>
+                                    <span class="uc-fs-14px uc-lh-14px uc-c-333 uc-ml-6px">起</span>
+                                </div>
+                                <div class="uc-amount-notice uc-fs-12px uc-lh-12px uc-c-666">一口价含过路费高速费等所有费用，提供发票</div>
+                            </div>
+                            <div class="uc-amount-actual-box">
+                                <div class="uc-amount-actual">
+                                    <span class="uc-fs-14px uc-lh-14px uc-c-333">一口价</span>
+                                    <span class="uc-fs-14px uc-lh-12px uc-c-ff6633 uc-ml-6px">&yen;</span>
+                                    <span class="uc-amount uc-fs-22px uc-lh-16px uc-c-ff6633">40</span>
+                                </div>
+                                <div class="uc-amount-notice uc-fs-12px uc-lh-12px uc-c-666">滴滴专车提供本次用车服务</div>
+                                <div class="uc-select uc-select-jie uc-select-off"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="uc-product-item uc-product-song">
+                        <div class="uc-box1">
+                            <div class="uc-time-box uc-time-box-song uc-bb-05px">
+                                <div class="uc-time uc-time-song uc-fs-16px uc-lh-16px uc-c-333"></div>
+                                <div class="uc-time-notice uc-fs-12px uc-lh-12px uc-c-666"><span class="uc-train-no-song"></span>预计<span class="uc-start-time"></span>发车</div>
+                            </div>
+                            <div class="uc-address-box uc-start-box">
+                                <div class="uc-fs-16px uc-lh-16px uc-c-ccc">您在哪上车</div>
+                                <div class="uc-fs-16px uc-lh-16px uc-c-333 uc-to-ellipsis uc-none"></div>
+                            </div>
+                        </div>
+                        <div class="uc-bt-05px uc-amount-box">
+                            <div class="uc-amount-default-box uc-none">
+                                <div class="uc-amount-default">
+                                    <span class="uc-fs-14px uc-lh-14px uc-c-333">一口价</span>
+                                    <span class="uc-fs-14px uc-lh-12px uc-c-ff6633 uc-ml-6px">&yen;</span>
+                                    <span class="uc-fs-22px uc-lh-16px uc-c-ff6633">10</span>
+                                    <span class="uc-fs-14px uc-lh-14px uc-c-333 uc-ml-6px">起</span>
+                                </div>
+                                <div class="uc-amount-notice uc-fs-12px uc-lh-12px uc-c-666">一口价含过路费高速费等所有费用，提供发票</div>
+                            </div>
+                            <div class="uc-amount-actual-box">
+                                <div class="uc-amount-actual">
+                                    <span class="uc-fs-14px uc-lh-14px uc-c-333">一口价</span>
+                                    <span class="uc-fs-14px uc-lh-12px uc-c-ff6633 uc-ml-6px">&yen;</span>
+                                    <span class="uc-amount uc-fs-22px uc-lh-16px uc-c-ff6633">40</span>
+                                </div>
+                                <div class="uc-amount-notice uc-fs-12px uc-lh-12px uc-c-666">滴滴专车提供本次用车服务</div>
+                                <div class="uc-select uc-select-off"></div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <p class="uc-user-notice uc-fs-12px uc-lh-12px uc-c-33cc66">用户须知</p>
+        </div>
+    </div>
+
+    <!-- <input type="text" class="uc-address-input uc-f-1 uc-start-input uc-fs-16px uc-lh-16px uc-c-333" placeholder="您在哪上车">
+    <div class="uc-address-del">
+        <img src="https://img1.40017.cn/cn/TC_Car/h5/img/common/delete.png?v=2018010401" alt="del_icon" class="uc-icon">
+    </div> -->
+    <script src="./usercarConfig.js"></script>
+</body>
+</html>

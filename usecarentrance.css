@@ -1,0 +1,389 @@
+/* 重置样式 */
+#usecar h2,
+#usecar ul,
+#usecar p {
+    margin: 0;
+}
+
+#usecar ul {
+    padding: 0;
+    list-style: none;
+}
+
+/* 常用样式 */
+#usecar .uc-c-333 {
+    color: #333;
+}
+
+#usecar .uc-c-666 {
+    color: #666;
+}
+
+#usecar .uc-c-ccc {
+    color: #ccc;
+}
+
+#usecar .uc-c-ff6633 {
+    color: #ff6633;
+}
+
+#usecar .uc-c-33cc66 {
+    color: #33cc66;
+}
+
+#usecar .uc-fs-12px {
+    font-size: 12px;
+}
+
+#usecar .uc-fs-14px {
+    font-size: 14px;
+}
+
+#usecar .uc-fs-16px {
+    font-size: 16px;
+}
+
+#usecar .uc-fs-22px {
+    font-size: 22px;
+}
+
+#usecar .uc-lh-12px {
+    line-height: 12px;
+}
+
+#usecar .uc-lh-14px {
+    line-height: 14px;
+}
+
+#usecar .uc-lh-16px {
+    line-height: 16px;
+}
+
+#usecar .uc-lh-22px {
+    line-height: 22px;
+}
+
+#usecar .uc-ml-6px {
+    margin-left: 6px;
+}
+
+/* inline-block */
+#usecar .uc-d-inline-block {
+    display: inline-block;
+}
+
+/* none */
+#usecar .uc-none {
+    display: none !important;
+}
+
+/* border-box */
+#usecar .uc-bs-bb {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* 0.5px border bt: border-top bb: border-bottom*/
+#usecar .uc-bt-05px,
+#usecar .uc-bb-05px {
+    position: relative;
+}
+
+#usecar .uc-bt-05px:before,
+#usecar .uc-bb-05px:after {
+    content: "";
+    position: absolute;
+    left: -50%;
+    width: 200%;
+    height: 1px;
+    background-color: #dcdcdc;
+    -webkit-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    -o-transform: scale(0.5);
+    transform: scale(0.5);
+    z-index: 1;
+}
+
+#usecar .uc-bt-05px:before {
+    top: 0;
+}
+
+#usecar .uc-bb-05px:after {
+    bottom: 0;
+}
+
+/* flex */
+#usecar .uc-d-flex {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+#usecar .uc-ai-center {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+#usecar .uc-f-1 {
+    -webkit-box-flex: 1; 
+    -moz-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+/* 超出文本处理 */
+/* 点点点 */
+#usecar .uc-to-ellipsis {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+/* 隐藏 */
+#usecar .uc-o-hidden {
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* main */
+#usecar .uc-main {
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+#usecar .uc-title {
+    padding: 15px 0 15px 15px;
+}
+
+/* tab */
+#usecar .uc-tab {
+    font-size: 0;
+}
+
+#usecar .uc-tab-item {
+    position: relative;
+    text-align: center;
+    line-height: 45px;
+}
+
+#usecar .uc-tab-item-on {
+    color: #33cc66;
+}
+
+#usecar .uc-tab-item-on:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    width: 70%;
+    height: 2px;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-color: #33cc66;
+}
+
+#usecar .uc-station {
+    display: inline-block;
+    line-height: 45px;
+}
+
+/* product */
+#usecar .uc-box1 {
+    padding-left: 40px;
+}
+
+#usecar .uc-time-box {
+    position: relative;
+    padding: 10px 0;
+    margin-top: 2px;
+}
+
+#usecar .uc-time-box:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    width: 15px;
+    height: 15px;
+    margin-top: -7.5px;
+    background: url("http://file.40017.cn/img140017cnproduct/cn/tc_car/h5/img/common/datetime.png?v=2018010201") no-repeat;
+    background-size: 100%;
+}
+
+#usecar .uc-time-notice {
+    margin-top: 6px;
+}
+
+#usecar .uc-address-box {
+    position: relative;
+    padding: 15px 0;
+    font-size: 0;
+}
+
+#usecar .uc-start-box:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -25px;
+    width: 7px;
+    height: 7px;
+    margin-top: -3.5px;
+    border-radius: 50%;
+    background-color: #33cc66;
+}
+
+#usecar .uc-arrive-box:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -25px;
+    width: 7px;
+    height: 7px;
+    margin-top: -3.5px;
+    border-radius: 50%;
+    background-color: #ff6633;
+}
+
+/* 选择地址 */
+#usecar .uc-address-input-box {
+    position: relative;
+    padding-left: 40px;
+    font-size: 0;
+}
+
+#usecar .uc-address-input {
+    width: 86%;
+    width: calc(100% - 35px);
+    border: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 35px;
+    color: #333;
+    outline: none;
+    vertical-align: top;
+}
+
+/* WebKit browsers 伪元素 */
+#usecar .uc-address-input::-webkit-input-placeholder {
+    color: #ccc;
+    font-size: 16px;
+}
+
+/* Mozilla Firefox 4 to 18 伪类 */
+#usecar .uc-address-input:-moz-placeholder {
+    color: #ccc;
+    font-size: 16px;
+}
+
+/* Mozilla Firefox 19+ 伪元素 */
+#usecar .uc-address-input::-moz-placeholder {
+    color: #ccc;
+    font-size: 16px;
+}
+
+/* Internet Explorer 10+ 伪类 */
+#usecar .uc-address-input:-ms-input-placeholder {
+    color: #ccc;
+    font-size: 16px;
+}
+
+#usecar .uc-address-del {
+    width: 15px;
+    height: 15px;
+    padding: 10px;
+}
+
+#usecar .uc-address-no-result {
+    font-size: 16px;
+    line-height: 40px;
+    color: #ccc;
+    text-align: center;
+}
+
+#usecar .uc-address-list {
+    max-height: 140px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+#usecar .uc-address-item {
+    padding: 12px 0 12px 40px;
+}
+
+#usecar .uc-place {
+    line-height: 18px;
+}
+
+#usecar .uc-address-detail {
+    line-height: 14px;
+}
+
+#usecar .uc-amount-box {
+    padding: 15px 0 17px;
+    text-align: center;
+}
+
+#usecar .uc-amount-default {
+    font-size: 0;
+}
+
+#usecar .uc-amount-default > span {
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+#usecar .uc-amount-notice {
+    margin-top: 15px;
+}
+
+#usecar .uc-amount-actual-box {
+    position: relative;
+    display: inline-block;
+}
+
+#usecar .uc-amount-actual {
+    font-size: 0;
+}
+
+#usecar .uc-amount-actual > span {
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+#usecar .uc-select-off {
+    position: absolute;
+    top: 50%;
+    right: -47px;
+    width: 18px;
+    height: 18px;
+    margin-top: -11px;
+    background-color: transparent;
+    border: 2px solid #e0dfe1;
+    border-radius: 50%;
+}
+
+#usecar .uc-select-on {
+    position: absolute;
+    top: 50%;
+    right: -47px;
+    width: 22px;
+    height: 22px;
+    margin-top: -11px;
+    background: url("./uc-selected.png") no-repeat;
+    background-size: 100%;
+}
+
+/* 用户须知 */
+#usecar .uc-user-notice {
+    text-decoration: underline;
+    padding: 8px 0 0 15px;
+}
